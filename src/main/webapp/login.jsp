@@ -7,35 +7,21 @@
     <script src="js/bootstrap.min.js"></script>
     <style>
         .login{
-            position: absolute;
-            top: 0px;
-            bottom: 0px;
-            left: 0px;
-            right: 0px;
             width: 600px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
 <div class="login">
-    <form>
+    <form method="post" action="user/userLogin.do">
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            <label for="username">用户名</label>
+            <input type="text" name="user" class="form-control" id="username">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Check me out
-            </label>
+            <label for="password">密码</label>
+            <input type="password" name="pass" class="form-control" id="password">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>
