@@ -17,6 +17,13 @@ public class UserService implements IUserService {
     }
 
     public boolean addUser(User user){
-        return userDAO.addUser(user);
+        boolean b = false;
+        try{
+            b = userDAO.addUser(user);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+        return b;
     }
 }

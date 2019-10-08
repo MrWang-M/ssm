@@ -23,12 +23,12 @@
     <script>
         layui.use('layer', function(){
             var layer = layui.layer;
-            layer.msg('账号或密码错误');
+            layer.msg('注册失败');
         });
     </script>
 </c:if>
 <div class="login">
-    <form class="layui-form" action="userLogin.do" method="post">
+    <form class="layui-form" action="userRegist.do" method="post">
         <div class="layui-form-item">
             <label class="layui-form-label">用户名</label>
             <div class="layui-input-block">
@@ -43,8 +43,8 @@
         </div>
         <div class="layui-form-item">
             <div class="layui-input-block">
-                <button type="submit" class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
-                <button type="button" onclick="javascript:window.location.href='regist.jsp';" class="layui-btn layui-btn-primary">注册</button>
+                <button type="submit" class="layui-btn" lay-submit lay-filter="formDemo">注册</button>
+                <button type="button" onclick="javascript:window.location.href='login.jsp';" class="layui-btn layui-btn-primary">登录</button>
             </div>
         </div>
     </form>
