@@ -18,6 +18,7 @@ public class Test {
 
     @org.junit.Test
     public void getUser(){
+
         System.out.println(userService.addUser(new User("", "hehe", "123456")));
     }
 }
