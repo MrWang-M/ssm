@@ -10,4 +10,9 @@
     <select id="getUser" parameterType="String" resultMap="user">
         select * from tb_users where user_name = #{arg0} and user_pwd = #{arg1}
     </select>
+
+
+    <insert id="addUser" parameterType="User">
+        insert into tb_users values (null, #{name}, #{pass})
+    </insert>
 </mapper>

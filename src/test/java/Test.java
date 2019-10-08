@@ -1,4 +1,5 @@
 
+import com.ssm.template.pojos.User;
 import com.ssm.template.services.UserService;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,6 @@ public class Test {
 
     @org.junit.Test
     public void getUser(){
-        System.out.println(userService.getUser("lisi", "123456"));
+        System.out.println(userService.addUser(new User("", "hehe", "123456")));
     }
 }

@@ -9,4 +9,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDAO {
     User getUser(String name, String pass);
+
+    boolean addUser(User user);
 }
