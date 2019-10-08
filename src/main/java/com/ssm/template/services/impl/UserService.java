@@ -1,13 +1,14 @@
-package com.ssm.template.services;
+package com.ssm.template.services.impl;
 
 
 import com.ssm.template.dao.UserDAO;
 import com.ssm.template.pojos.User;
+import com.ssm.template.services.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService {
+public class UserService implements IUserService {
     @Autowired
     private UserDAO userDAO;
 
