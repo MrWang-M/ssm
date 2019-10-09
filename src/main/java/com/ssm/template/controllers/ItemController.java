@@ -1,5 +1,6 @@
 package com.ssm.template.controllers;
 
+import com.ssm.template.handlers.ZanHandler;
 import com.ssm.template.pojos.Item;
 import com.ssm.template.services.impl.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,8 @@ import java.util.List;
 public class ItemController {
     @Autowired
     private ItemService itemService;
+
+
 
     @RequestMapping("items.do")
     public ModelAndView getItems(){
