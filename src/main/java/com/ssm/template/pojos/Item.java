@@ -3,15 +3,13 @@ package com.ssm.template.pojos;
 public class Item {
     private String id;
     private String name;
-    private String zan;
 
     public Item() {
     }
 
-    public Item(String id, String name, String zan) {
+    public Item(String id, String name) {
         this.id = id;
         this.name = name;
-        this.zan = zan;
     }
 
     @Override
@@ -19,7 +17,6 @@ public class Item {
         return "Item{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", zan='" + zan + '\'' +
                 '}';
     }
 
@@ -39,11 +36,4 @@ public class Item {
         this.name = name;
     }
 
-    public String getZan() {
-        return zan;
-    }
-
-    public void setZan(String zan) {
-        this.zan = zan;
-    }
 }

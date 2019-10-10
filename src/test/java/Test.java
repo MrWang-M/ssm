@@ -19,7 +19,14 @@ public class Test {
     private ItemService itemService;
 
     @org.junit.Test
-    public void getUser(){
-        System.out.println(itemService.getItems());
+    public void text(){
+        for (int i = 0 ; i > 1000; i++){
+            new Thread(){
+                @Override
+                public void run() {
+                    itemService.getItems("1");
+                }
+            }.start();
+        }
     }
 }

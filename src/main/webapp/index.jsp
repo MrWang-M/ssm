@@ -16,13 +16,27 @@
                 item.removeClass("layui-icon-rate");
                 item.addClass("layui-icon-rate-solid")
                 item.attr("status", 1);
-                $.post("addZan.do", {"itemId": id});
+                $.post("addZan.do", {"itemId": id}, function (data) {
+                    if (data.code == '1'){
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg(data.msg);
+                        });
+                    }
+                },"json");
             } else {
                 item.html(parseInt(item.html()) - 1);
                 item.removeClass("layui-icon-rate-solid");
                 item.addClass("layui-icon-rate")
                 item.attr("status", 0);
-                $.post("renameZan.do", {"itemId": id});
+                $.post("renameZan.do", {"itemId": id}, function (data) {
+                    if (data.code == '1'){
+                        layui.use('layer', function(){
+                            var layer = layui.layer;
+                            layer.msg(data.msg);
+                        });
+                    }
+                },"json");
             }
         }
     </script>
@@ -49,8 +63,11 @@
                 <tr>
                     <td>${item.id}</td>
                     <td>${item.name}</td>
-                    <td><span onclick="item_click('${item.id}')" id="${item.id}" class="layui-icon layui-icon-rate"
-                              status="0">${item.zan}</span></td>
+                    <td>
+                        <span onclick="item_click('${item.id}')" id="${item.id}" class="layui-icon layui-icon-rate<c:if test="${item.user eq '1'}">-solid</c:if>" status="${item.user}">
+                                ${item.zan}
+                        </span>
+                    </td>
                 </tr>
             </c:forEach>
 
