@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-        <spring-version>5.1.9.RELEASE</spring-version>
+        <spring-version>5.2.3.RELEASE</spring-version>
         <logging-vresion>1.2</logging-vresion>
         <druid-version>1.1.20</druid-version>
         <mysql-version>8.0.16</mysql-version>
